@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import BibleData from '../../../../../the-message-the-bible-ptbr.json'
+import BibleData from '../../../../../public/assets/the-message-the-bible-ptbr.json'
 
 interface BibleData {
   books?: (BooksEntity)[] | null;
@@ -46,7 +46,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
       if (jsonBookName === bookName){
         bookIndex = idx;
         headerBookName = book.name;
-        
+
         console.log('>> livro: ' + bookName);
         console.log('>> book.name: ' + jsonBookName);
         console.log('>> idx: ' + idx);

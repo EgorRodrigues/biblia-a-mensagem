@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Biblia A Mensagem</title>
+        <title>Bíblia A Mensagem</title>
         <link rel="shortcut icon" href="/icons/bible.svg" type="image/png"/>
       </Head>
 

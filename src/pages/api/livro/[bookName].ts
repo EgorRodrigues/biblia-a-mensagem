@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import BibleData from '../../../../the-message-the-bible-ptbr.json'
+import BibleData from '../../../../public/assets/the-message-the-bible-ptbr.json'
 
 interface BibleData {
   books?: (BooksEntity)[] | null;
