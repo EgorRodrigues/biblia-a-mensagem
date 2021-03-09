@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Biblia A Mensagem</title>
+        <link rel="shortcut icon" href="/icons/bible.svg" type="image/png"/>
       </Head>
 
       <main className={styles.main}>

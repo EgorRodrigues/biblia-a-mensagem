@@ -25,10 +25,10 @@ export default function BibleBooksList() {
       <div className={styles.booksSection}>
         <h3 className={styles.titleH3}>Antigo Testamento</h3>
         {
-          oldTestamentBooks.map((bookName, idx) => {
+          oldTestamentBooks.map((bookName) => {
             return (
-              <Link href="/sobre">
-                <a className={styles.card} key={idx}>
+              <Link href="/sobre" key={bookName}>
+                <a className={styles.card}>
                   <p>{bookName}</p>
                 </a>
               </Link>
@@ -39,10 +39,10 @@ export default function BibleBooksList() {
       <div className={styles.booksSection}>
         <h3 className={styles.titleH3}>Novo Testamento</h3>
         {
-          newTestamentBooks.map((bookName, idx) => {
+          newTestamentBooks.map((bookName) => {
             return (
-              <Link href="/sobre">
-                <a className={styles.card} key={idx}>
+              <Link href="/sobre" key={bookName}>
+                <a className={styles.card}>
                   <p>{bookName}</p>
                 </a>
               </Link>
