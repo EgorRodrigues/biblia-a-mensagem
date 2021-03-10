@@ -12,9 +12,8 @@ const Bible = (req: NextApiRequest, res: NextApiResponse) => {
 
 export const config = {
   api: {
-    bodyParser: {
-      sizeLimit: '8mb',
-    },
+    externalResolver: true,
+    bodyParser: false,
   },
 }
 
