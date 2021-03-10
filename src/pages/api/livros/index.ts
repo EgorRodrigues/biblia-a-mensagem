@@ -4,7 +4,7 @@ import BibleBooksNames from '../../../../public/assets/the-message-the-bible-boo
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'GET') {
-    res.status(500).json({message: 'Desculpe, só aceitamos solicitações GET '});
+    res.status(405).json({message: 'Desculpe, só aceitamos solicitações GET '});
   } else {
     res.status(200).json(BibleBooksNames)
   }

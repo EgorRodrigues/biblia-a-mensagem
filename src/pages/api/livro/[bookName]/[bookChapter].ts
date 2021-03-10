@@ -31,7 +31,7 @@ const isValid = (chapter: number, bookData: BooksEntity) => {
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'GET') {
-    res.status(500).json({message: 'Desculpe, só aceitamos solicitações GET '});
+    res.status(405).json({message: 'Desculpe, só aceitamos solicitações GET '});
   } else {
     const rawBookName = req.query.bookName
     const bookChapter = Number(req.query.bookChapter)
