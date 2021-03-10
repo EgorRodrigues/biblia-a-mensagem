@@ -1,4 +1,4 @@
-import BibleBooks from '../../../the-message-the-bible-books.json'
+import BibleBooks from '../../../public/assets/the-message-the-bible-books.json'
 
 // https://stackoverflow.com/questions/990904/remove-accents-diacritics-in-a-string-in-javascript
 function removeDiacritics(char) {

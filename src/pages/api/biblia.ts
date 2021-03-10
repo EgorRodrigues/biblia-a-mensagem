@@ -13,7 +13,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
 export const config = {
   api: {
     bodyParser: {
-      sizeLimit: '7200kb',
+      sizeLimit: '8Mb',
     },
   },
 }

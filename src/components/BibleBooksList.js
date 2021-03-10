@@ -1,4 +1,4 @@
-import BibleData from '../../the-message-the-bible-ptbr.json'
+import BibleData from '../../public/assets/the-message-the-bible-ptbr.json'
 import styles from '../styles/pages/BibleBooksList.module.css'
 import Link from 'next/link'
 
