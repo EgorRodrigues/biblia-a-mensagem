@@ -2,7 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import BibleData from '../../../public/assets/the-message-the-bible-ptbr.json'
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
+const Bible = (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'GET') {
     res.status(500).json({message: 'Desculpe, só aceitamos solicitações GET '});
   } else {
@@ -13,7 +13,9 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
 export const config = {
   api: {
     bodyParser: {
-      sizeLimit: '8Mb',
+      sizeLimit: '8mb',
     },
   },
 }
+
+export default Bible
