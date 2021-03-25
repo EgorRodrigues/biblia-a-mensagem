@@ -20,24 +20,31 @@ interface VersesEntity {
   content: string;
 }
 
-function removeDiacritics(char: any) {
-  return char.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-};
+function removeDiacritics(str: any) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+}
+
+function formatBookName(str) {
+  return removeDiacritics(str).replace(" ", "").toLowerCase()
+}
+
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'GET') {
-    res.status(405).json({message: 'Desculpe, só aceitamos solicitações GET '});
+    res.status(405).json({message: 'Desculpe, só aceitamos solicitações GET'});
   } else {
     const rawBookName = req.query.bookName
-    const bookName = removeDiacritics(rawBookName).toLowerCase().replace(" ", "");
+    const bookName = formatBookName(rawBookName);
     const books = BibleData['books'];
     let bookIndex : undefined | number;
+    let originalBookName : string;
   
     books.forEach((book: BooksEntity, idx: number) => {
-      let jsonBookName = removeDiacritics((book.name)).toLowerCase().replace(" ", "");
+      let jsonBookName = formatBookName(book.name);
   
       if (jsonBookName === bookName){
         bookIndex = idx;
+        originalBookName = book.name
         console.log('>> livro: ' + bookName);
         console.log('>> book.name: ' + jsonBookName);
         console.log('>> idx: ' + idx);
@@ -45,7 +52,8 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
     });
     
     if (typeof bookIndex !== 'undefined') {
-      res.status(200).json(books[bookIndex]);
+      const bookInfo = {'title': originalBookName, 'chapters': books[bookIndex].chapters.length}
+      res.status(200).json(bookInfo);
     }
     else {
       res.status(502).json({message: `Não existe nenhum livro com o nome ${rawBookName}`})
