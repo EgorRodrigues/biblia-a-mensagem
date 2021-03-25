@@ -234,7 +234,7 @@ export default function Book(props) {
             </Fab>
           </ScrollTopButton>
 
-          <NextChapterButton {...props}>
+          {/* <NextChapterButton {...props}>
             <Fab
               color="secondary"
               size="small"
@@ -244,7 +244,7 @@ export default function Book(props) {
             >
               <KeyboardArrowRightIcon color="inherit"/>
             </Fab>
-          </NextChapterButton>
+          </NextChapterButton> */}
         </main>
       </div>
 
