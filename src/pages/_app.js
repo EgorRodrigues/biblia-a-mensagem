@@ -1,10 +1,8 @@
-import React, { useContext, useState } from 'react';
-import { Button, createMuiTheme, MuiThemeProvider, Paper, Switch } from '@material-ui/core';
+import React from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import '../styles/globals.css'
-import { BibleContext, BibleProvider } from '../contexts/BibleContext';
-import { getTheme } from '../theme'
+import { BibleProvider } from '../contexts/BibleContext';
 
 function MyApp({ Component, pageProps }) {
 

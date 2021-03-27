@@ -43,10 +43,7 @@ ElevationScroll.propTypes = {
 export default function Header(props) {
   const {
     darkMode,
-    setDarkMode,
-    mainBgColor,
-    secondaryBgColor,
-    lightBgColor
+    setDarkMode
   } = useContext(BibleContext);
 
   const [anchorEl, setAnchorEl] = useState(null);
