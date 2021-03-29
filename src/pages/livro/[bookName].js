@@ -16,7 +16,7 @@ function formatBookName(str) {
   return removeDiacritics(str).replace(" ", "").toLowerCase()
 }
 
-function getBibleBooksPaths() {
+export function getBibleBooksPaths() {
 
   // Get the paths we want to pre-render based on bible books
   const paths = BibleBooksNames.map((book) => {
@@ -65,7 +65,7 @@ export default function Book(props) {
     items.push(
       <Link href={`/livro/${formatBookName(bookName)}/${i}`} key={i}>
         <Button
-          color="primary.dark"
+          // color="primary.dark"
           variant="outlined"
           size="large"
           className={darkMode ? styles.cardDark : styles.card}

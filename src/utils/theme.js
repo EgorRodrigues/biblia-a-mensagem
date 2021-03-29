@@ -1,6 +1,6 @@
 import { createMuiTheme } from '@material-ui/core';
 import { useContext } from 'react';
-import { BibleContext } from './contexts/BibleContext';
+import { BibleContext } from '../contexts/BibleContext';
 
 export function getTheme() {
   const { darkMode } = useContext(BibleContext)

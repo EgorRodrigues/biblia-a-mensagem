@@ -98,7 +98,7 @@ export default function BibleBooksList() {
               return (
                 <Link href={`/livro/${formatBookName(book)}`} key={book}>
                   <Button
-                    color="primary.dark"
+                    // color="primary.dark"
                     variant="outlined"
                     size="large"
                     className={darkMode ? styles.cardDark : styles.card}
@@ -115,7 +115,7 @@ export default function BibleBooksList() {
               return (
                 <Link href={`/livro/${formatBookName(book.title)}`} key={book.title}>
                   <Button
-                    color="primary.dark"
+                    // color="primary.dark"
                     variant="outlined"
                     size="large"
                     className={darkMode ? styles.cardDark : styles.card}
@@ -140,7 +140,7 @@ export default function BibleBooksList() {
               return (
                 <Link href={`/livro/${formatBookName(book)}`} key={book}>
                   <Button
-                    color="primary.dark"
+                    // color="primary.dark"
                     variant="outlined"
                     size="large"
                     className={darkMode ? styles.cardDark : styles.card}
@@ -157,7 +157,7 @@ export default function BibleBooksList() {
               return (
                 <Link href={`/livro/${formatBookName(book.title)}`} key={book.title}>
                   <Button
-                    color="primary.dark"
+                    // color="primary.dark"
                     variant="outlined"
                     size="large"
                     className={darkMode ? styles.cardDark : styles.card}
