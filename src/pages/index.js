@@ -13,6 +13,8 @@ function Home() {
     <Paper elevation={0} className={darkMode ? styles.rootDark : styles.root}>
       <Head>
         <title>Bíblia - A Mensagem</title>
+        <meta name="description" content="Leia a tradução Bíblia - A Mensagem online, separada por livros e capítulos. Versículos e mensagens bíblicas da palavra de Deus."/>
+        <meta name="robots" content="follow" />
       </Head>
       
       <div >

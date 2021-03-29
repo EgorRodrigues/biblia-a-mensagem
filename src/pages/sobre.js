@@ -14,8 +14,9 @@ export default function Sobre() {
       
       <Head>
         <title>Sobre | Bíblia - A Mensagem</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+        <meta name="description" content="Saiba mais sobre o projeto Bíblia - A Mensagem online, separada por livros e capítulos. Versículos e mensagens bíblicas da palavra de Deus."/>
+        <meta name="robots" content="follow" />
+    </Head>
 
       <Paper elevation={0} className={darkMode ? styles.rootDark : styles.root}>
         <main className={styles.main}>

@@ -84,11 +84,15 @@ export default function Book(props) {
     bookChapterHeader = <h5>{chapters} capítulos</h5>
   }
   
+  const description = `Leia ${bookName} com ${chapters} ${chapters === 1 ? 'capítulo' : 'capítulos'}. Bíblia  - A Mensagem online, separada por livros e capítulos. Versículos e mensagens bíblicas da palavra de Deus.`;
+
   return(
     <Paper elevation={0} className={darkMode ? styles.rootDark : styles.root}>
       <Head>
         <title>{bookName} | Bíblia - A Mensagem</title>
+        <meta name="description" content={description}/>
       </Head>
+
       <div className={styles.container}>
         <h3>{bookName}</h3>
         {bookChapterHeader}

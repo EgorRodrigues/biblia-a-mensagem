@@ -14,7 +14,8 @@ export default function Api() {
       
       <Head>
         <title>API | Bíblia - A Mensagem</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Aprenda a utilizar nossa API com a documentação da Bíblia - A Mensagem online, separada por livros e capítulos."/>
+        <meta name="robots" content="follow" />
       </Head>
 
       <Paper elevation={0} className={darkMode ? styles.rootDark : styles.root}>

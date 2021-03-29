@@ -63,6 +63,8 @@ export default function Book(props) {
   let bookName;
   let amountOfChapters;
   let verses = [];
+  let firstVerse = true;
+  let descriptionAuxContent = '';
   let prevChapterHref = '';
 
   const [nextChapter, setNextChapter] = useState(null);
@@ -81,8 +83,12 @@ export default function Book(props) {
       
     }
   });
-
+  
   bookContentJson.forEach((verse, idx) => {
+    if (firstVerse) {
+      descriptionAuxContent = verse.content.substr(0,102) + '...';
+      firstVerse = false;
+    }
     if (verse.title === '') {
       verses.push(
         <div className={styles.verse} key={idx}>
@@ -205,11 +211,15 @@ export default function Book(props) {
       </Link>
     );
   }
+  
+  const description = `Leia ${bookName}, capítulo ${chapter}. Bíblia - A Mensagem online. ${descriptionAuxContent}`;
+
 
   return(
     <Paper elevation={0} className={darkMode ? styles.rootDark : styles.root}>
       <Head>
         <title>{bookName} {chapter} | Bíblia - A Mensagem</title>
+        <meta name="description" content={description}/>
       </Head>
 
       <div className={styles.container}>
